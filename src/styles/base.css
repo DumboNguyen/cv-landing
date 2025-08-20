@@ -1,0 +1,40 @@
+/* Modern CSS reset (minimal) */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html, body, #root { height: 100%; }
+body { line-height: 1.5; -webkit-font-smoothing: antialiased; }
+img, picture, video, canvas, svg { display: block; max-width: 100%; }
+input, button, textarea, select { font: inherit; }
+
+/* Base theme */
+html { color-scheme: dark light; }
+body {
+	font-family: var(--font-sans);
+	background: var(--color-bg);
+	color: var(--color-fg);
+}
+
+a { color: var(--color-primary); text-decoration: none; }
+a:hover { color: var(--color-primary-600); }
+
+h1 { font-size: 3.2rem; line-height: 1.1; }
+button {
+	border-radius: var(--radius-md);
+	border: 1px solid transparent;
+	padding: var(--space-3) var(--space-4);
+	font-size: var(--text-base);
+	font-weight: 500;
+	background: #1a1a1a;
+	cursor: pointer;
+	transition: border-color 0.25s;
+}
+button:hover { border-color: var(--color-primary); }
+button:focus-visible { outline: 4px auto -webkit-focus-ring-color; }
+
+@media (prefers-color-scheme: light) {
+	body { background: #ffffff; color: #213547; }
+	a:hover { color: #747bff; }
+	button { background: #f9f9f9; }
+}
+
+

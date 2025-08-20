@@ -1,0 +1,14 @@
+@import "tailwindcss";
+/* CSS entrypoint. We'll layer tokens, base, components, utilities. */
+
+/* 1) Design tokens */
+@import url('./styles/tokens.css');
+
+/* 2) Base styles (resets, html/body defaults, typography scale) */
+@import url('./styles/base.css');
+
+/* 3) Component primitives (buttons, cards, forms) */
+@import url('./styles/components.css');
+
+/* 4) Utilities/helpers (spacing helpers, visually-hidden, layout helpers) */
+@import url('./styles/utilities.css');
