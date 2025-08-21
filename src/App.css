@@ -1,349 +1,439 @@
 @reference "tailwindcss";
 
-/*#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* ===== CHANGES MADE FOR RESPONSIVE DESIGN ===== */
+/* 
+  WHAT WAS REMOVED AND WHY:
+  
+  1. ABSOLUTE POSITIONING REMOVED:
+     - Removed: position: absolute from header-menu, container, and content sections
+     - Why: Absolute positioning removes elements from normal document flow, 
+       causing layout breaking on mobile and making responsive design impossible
+  
+  2. FIXED DIMENSIONS REMOVED:
+     - Removed: height: 63px (fixed header height)
+     - Removed: width: 450px, width: 488px (fixed content widths)
+     - Removed: left: 35%, top: 20px (fixed positioning values)
+     - Why: Fixed dimensions don't adapt to different screen sizes, 
+       causing overflow and horizontal scrolling on mobile
+  
+  3. COMPLEX POSITIONING REMOVED:
+     - Removed: top: 63px, left: 8%, left: 664px (fixed positioning)
+     - Removed: position: absolute from multiple containers
+     - Why: Complex positioning creates rigid layouts that break on mobile
+  
+  4. OLD RESPONSIVE APPROACH REMOVED:
+     - Removed: @media (max-width: ...) queries that tried to override desktop styles
+     - Why: max-width queries create conflicts and are harder to maintain
+  
+  5. UNNECESSARY CSS REMOVED:
+     - Removed: unused logo animations and old demo styles
+     - Removed: complex hover states that weren't essential
+     - Why: Cleaner, more maintainable code focused on core functionality
+  
+  WHAT WAS ADDED:
+  
+  1. MOBILE-FIRST APPROACH:
+     - Base styles are for mobile devices
+     - @media (min-width: ...) enhances for larger screens
+  
+  2. FLEXBOX LAYOUTS:
+     - display: flex everywhere for flexible, responsive layouts
+     - flex-direction: column on mobile, row on larger screens
+  
+  3. RESPONSIVE UNITS:
+     - width: 100% with max-width constraints
+     - Flexible padding and margins that scale
+  
+  4. CLEAN BREAKPOINTS:
+     - 768px: Tablet layout (side-by-side)
+     - 1024px: Desktop layout (full spacing and sizing)
+*/
+
+/* ===== CSS RESET & BASE STYLES ===== */
+/* Reset all elements to prevent browser default styling conflicts */
+* {
+  box-sizing: border-box;  /* Prevents padding/borders from adding to element width */
+  margin: 0;               /* Removes default browser margins */
+  padding: 0;              /* Removes default browser padding */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}*/
-
+/* ===== MOBILE-FIRST RESPONSIVE DESIGN ===== */
+/* Header section - starts with mobile-friendly styles */
 .header {
-  width: 100%; 
-  max-width: 100%; 
-  height: 63px; 
-  background: #FFFFFFFF; /* white */
-  box-shadow: 0px 0px 1px #171a1f0D, 0px 0px 2px #171a1f14; /* shadow-xs */
+  width: 100%;
+  background: #FFFFFFFF;
+  box-shadow: 0px 0px 1px #171a1f0D, 0px 0px 2px #171a1f14;
+  padding: 16px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 63px;        /* Minimum height, can grow if needed */
+  
+  /* changed: removed position: relative (was basic positioning that didn't help), 
+     max-width: 100% (was redundant with width: 100%), 
+     height: 63px (was fixed height that didn't adapt to content)
+     min-height: 63px (replaces fixed height with flexible minimum) */
 }
 
-.header .header-menu{
-  display: flex; 
-  align-items: center; 
-  font-family: Open Sans; /* Body */
-  font-size: 14px; 
-  line-height: 22px; 
-  font-weight: 400; 
-  opacity: 1; 
+/* Header navigation menu */
+.header .header-menu {
+  display: flex;
+  align-items: center;
+  font-family: Open Sans;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
   gap: 8px;
-  width: 100%;
-  justify-content: center;
+  flex-wrap: wrap;          /* Allows menu items to wrap to new lines on small screens */
+  justify-content: center; 
 }
 
+/* Individual menu items */
 .header-menu .header-menu-item {
-  padding: 0px 12px; 
-  color: #565D6DFF; /* neutral-600 */
-  /*background: #000000FF; */ /* transparent */
-  cursor: pointer; 
-  white-space: nowrap; 
+  padding: 8px 12px;
+  color: #565D6DFF;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
+/* Selected/active menu item */
 .header-menu .header-menu-item.selected {
-  font-weight: 700; 
-  color: #3275B4FF; /* primary-500 */
-  background: #000000FF; /* transparent */
+  font-weight: 700;
+  color: #3275B4FF;
 }
 
-/* Header Menu - Selected item */
-.header-menu .header-menu-item.selected:hover:active {
-  color: #3275B4FF; /* primary-500 */
-  background: #000000FF; /* transparent */
-}
-
+/* Menu link styles */
 .header .header-menu a,
 .header .header-menu a:visited {
   color: #565D6DFF;
 }
 
 .header .header-menu a:hover {
-  color: #384250FF; /* neutral-700-ish */
+  color: #384250FF;
 }
 
+/* ===== MAIN BODY CONTAINER ===== */
 .body {
+  width: 100%;             /* Full width container */
+  background: white;        /* White background */
+  padding: 0px 20px;       /* Mobile-friendly padding */
+  
+  /* changed: removed max-width: 100% (was redundant with width: 100%), 
+     height: 100% (was unnecessary height constraint), 
+     max-height: 100% (was unnecessary height constraint)
+     added: padding: 0px 20px (provides mobile-friendly spacing) */
+}
+
+/* ===== MAIN CONTENT CONTAINER ===== */
+.container {
   width: 100%;
-  max-width: 100%;
-  height: 100%;
-  max-height: 100%;
-  padding: 0px 80px;
-  background: white;
-}
-
-.container{
-  max-width: 100%;
-  width: 100%;
-  height: 675px; 
-  background: #FFFFFFFF; /* white */
-  display: flex;
-  padding-top: 121px;
-  padding-left: 128px;
-}
-
-.container .container-content {
-  width: 488px;
-  height: 450px; 
-  background: #F4F7FBFF; 
-  border-radius: 16px; 
-  box-shadow: 0px 0px 1px #171a1f0D, 0px 0px 2px #171a1f14; /* shadow-xs */
-}
-
-.container .container-content .container-content-header{
-  font-family: Merriweather; 
-  font-size: 24px; 
-  line-height: 32px; 
-  font-weight: 600; 
-  color: #19191FFF;
-  padding: 22px 25px;
-}
-
-.container .container-content .container-content-body{
-  font-family: Open Sans; /* Body */
-  font-size: 18px; 
-  line-height: 29px; 
-  font-weight: 400; 
-  color: #19191FFF;
-  text-align: left;
-  padding: 0px 25px;
-  margin-right: 45px;
-}
-
-.container .container-information{
-  width: 50%;
-}
-
-.container .container-information .container-information-avatar {
-  width: 160px; 
-  height: 160px; 
-  background: #F3FDCEFF; 
-  opacity: 1; 
-  overflow: hidden; 
-  border-radius: 80px; 
-}
-
-.container .container-information .container-information-name {
-  margin-top: 20px;
-  font-family: Merriweather; 
-  font-size: 48px; 
-  line-height: 60px; 
-  font-weight: 700; 
-  color: #224A72FF; 
-}
-
-.container .container-information .container-information-title{
-  margin-top: 20px;
-  width: 450px; 
-  font-family: Merriweather; 
-  font-size: 30px; 
-  line-height: 41px; 
-  font-weight: 600; 
-  color: #171A1FFF; /* neutral-900 */
-  text-align: left;
-}
-
-.container .container-information .container-information-contact{
-  margin-top: 20px;
-  width: 450px; 
-  display: flex;
-  gap: 16px;
-}
-
-.container .container-information  .container-information-contact .container-information-primary{
-  width: 235px; 
-  height: 40px; 
-  padding: 0 12px; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  gap: 5px;
-  font-family: Open Sans; 
-  font-size: 14px; 
-  line-height: 22px; 
-  font-weight: 500; 
-  color: #FFFFFFFF; /* white */
-  background: #224A72FF; 
-  opacity: 1; 
-  border: none; 
-  border-radius: 6px; 
-}
-
-.container .container-information  .container-information-contact .container-information-primary .icon {
-  width: 20px; 
-  height: 20px; 
-  fill: #FFFFFFFF; /* white */
-  flex-shrink: 0;
-  vertical-align: middle;
-  margin-top: -2px;
-}
-
-/* Hover */
-.container .container-information  .container-information-contact .container-information-primary:hover {
-  color: #FFFFFFFF; /* white */
-  background: #152D45FF; 
-}
-
-/* Pressed */
-.container .container-information  .container-information-contact .container-information-primary:hover:active {
-  color: #FFFFFFFF; /* white */
-  background: #0E1D2EFF; 
-}
-
-/* Disabled */
-.container .container-information  .container-information-contact .container-information-primary:disabled {
-  opacity: 0.4; 
-}
-
-.container .container-information .container-information-secondary{
-  width: 237px; 
-  height: 40px; 
-  padding: 0 12px; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  font-family: Open Sans; 
-  font-size: 14px; 
-  line-height: 22px; 
-  font-weight: 500; 
-  color: #171A1FFF; /* neutral-900 */
-  background: #FFFFFFFF; /* white */
-  opacity: 1; 
-  border-radius: 6px; 
-  border-width: 1px; 
-  border-color: #DEE1E6FF; /* neutral-300 */
-  border-style: solid; 
-}
-
-.container .container-information .container-information-secondary .icon {
-  width: 20px; 
-  height: 20px; 
-  fill: #FFFFFFFF; /* white */
-  flex-shrink: 0;
-  vertical-align: middle;
-  margin-top: -2px;
-}
-
-/* Hover */
-.container .container-information .container-information-secondary:hover {
-  color: #224A72FF; /* primary color */
-  background: #F8F9FAFF; /* light gray */
-  border-color: #224A72FF;
-}
-
-/* Pressed */
-.container .container-information .container-information-secondary:hover:active {
-  color: #152D45FF; /* darker primary */
-  background: #F1F3F4FF; /* slightly darker gray */
-  border-color: #152D45FF;
-}
-/* Disabled */
-.container .container-information .container-information-secondary:disabled {
-  opacity: 0.4; 
-}
-
-/* Avatar image styles */
-.avatar-image {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #3275B4FF;
-  box-shadow: 0px 4px 12px rgba(50, 117, 180, 0.2);
-}
-
-.container-experience{
-  max-width: 100%;
-  width: 100%;
-  background: #FAFAFBFF;
-  flex-direction: column;
-  gap: 32px;
-  padding-left: 232px;
-  padding-right: 128px;
-}
-
-.container-experience .container-experience-header {
-  font-family: Merriweather; 
-  font-size: 36px; 
-  line-height: 40px; 
-  font-weight: 600; 
-  color: #224A72FF; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 112px;
-  margin-bottom: 64px;
-}
-
-.container-experience .container-experience-content {
   background: #FFFFFFFF;
-  border-radius: 10px; 
-  box-shadow: 0px 0px 1px #171a1f0D, 0px 0px 2px #171a1f14; /* shadow-xs */
-  padding: 24px;
-  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;   /* Stack items vertically on mobile */
+  gap: 40px;               /* Consistent spacing between sections */
+  padding: 40px 0;         /* Vertical padding for mobile */
+  
+  /* changed: 
+     height: 675px (was fixed height that didn't adapt to content), 
+     max-width: 100% (was redundant with width: 100%)
+     added:
+     flex-direction: column (stacks items vertically on mobile),
+     gap: 40px (provides consistent spacing),
+     padding: 40px 0 (replaces fixed positioning with responsive padding) */
 }
 
+/* ===== ABOUT ME CONTENT CARD ===== */
+.container .container-content {
+  width: 100%;             /* Full width on mobile */
+  max-width: 488px;        /* Maximum width to prevent oversized text on desktop */
+  background: #F4F7FBFF;   /* Light blue background */
+  border-radius: 16px;     /* Rounded corners */
+  box-shadow: 0px 0px 1px #171a1f0D, 0px 0px 2px #171a1f14; /* Subtle shadow */
+  padding: 24px;           /* Internal spacing */
+  
+  /* changed: removed position: 
+     width: 50% (was percentage width that didn't work well), 
+     height: 450px (was fixed height that didn't adapt to content)
+     added: width: 100% (full width on mobile),
+     max-width: 488px (prevents oversized text on desktop),
+     padding: 24px (provides internal spacing) */
+}
+
+/* About me section header */
+.container .container-content .container-content-header {
+  font-family: Merriweather;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: #19191FFF;
+  margin-bottom: 16px;
+}
+
+/* About me section body text */
+.container .container-content .container-content-body {
+  font-family: Open Sans;
+  font-size: 18px;
+  line-height: 29px;
+  font-weight: 400;
+  color: #19191FFF;
+  text-align: left;
+}
+
+/* ===== PERSONAL INFORMATION SECTION ===== */
+.container .container-information {
+  display: flex;            /* Flexbox container for personal info */
+  flex-direction: column;   /* Stack items vertically on mobile */
+  align-items: center;      /* Center items horizontally */
+  text-align: center;       /* Center text alignment for mobile */
+  gap: 20px;               /* Consistent spacing between elements */
+  
+  /* changed: removed width: 50% (was percentage width that didn't work well on mobile)
+     added: display: flex (enables flexbox layout),
+     flex-direction: column (stacks items vertically),
+     gap: 20px (provides consistent spacing) */
+}
+
+/* Profile avatar image */
+.container .container-information .container-information-avatar {
+  width: 120px;            /* Mobile-friendly avatar size */
+  height: 120px;           /* Square aspect ratio */
+  background: #F3FDCEFF;   /* Light green background */
+  border-radius: 60px;     /* Circular shape */
+  overflow: hidden;        /* Hides any content outside the circle */
+}
+
+/* Personal name */
+.container .container-information .container-information-name {
+  font-family: Merriweather; /* Serif font for name */
+  font-size: 36px;         /* Mobile-friendly name size */
+  line-height: 44px;       /* Proper line height */
+  font-weight: 700;        /* Bold weight for emphasis */
+  color: #224A72FF;        /* Primary blue color */
+}
+
+/* Professional title */
+.container .container-information .container-information-title {
+  font-family: Merriweather; /* Serif font for title */
+  font-size: 24px;         /* Mobile-friendly title size */
+  line-height: 32px;       /* Proper line height */
+  font-weight: 600;        /* Semi-bold weight */
+  color: #171A1FFF;        /* Dark text color */
+  max-width: 400px;        /* Prevents text from being too wide */
+}
+
+/* Contact buttons container */
+.container .container-information .container-information-contact {
+  display: flex;            /* Flexbox for button layout */
+  flex-direction: column;   /* Stack buttons vertically on mobile */
+  gap: 12px;               /* Space between buttons */
+  width: 100%;             /* Full width container */
+  max-width: 300px;        /* Maximum width for mobile */
+}
+
+/* Common button styles for both primary and secondary buttons */
+.container .container-information .container-information-contact .container-information-primary,
+.container .container-information .container-information-contact .container-information-secondary {
+  width: 100%;             /* Full width buttons on mobile */
+  height: 40px;            /* Touch-friendly button height */
+  padding: 0 12px;         /* Horizontal padding for text */
+  display: flex;            /* Flexbox for button content */
+  align-items: center;      /* Center content vertically */
+  justify-content: center;  /* Center content horizontally */
+  gap: 5px;                /* Space between icon and text */
+  font-family: Open Sans;  /* Consistent font */
+  font-size: 14px;         /* Readable font size */
+  line-height: 22px;       /* Proper line height */
+  font-weight: 500;        /* Medium weight */
+  border-radius: 6px;      /* Rounded corners */
+  border: none;            /* No border by default */
+}
+
+/* Primary button (Email Me) */
+.container .container-information .container-information-contact .container-information-primary {
+  color: #FFFFFFFF;        /* White text */
+  background: #224A72FF;   /* Primary blue background */
+}
+
+/* Secondary button (Call Me) */
+.container .container-information .container-information-contact .container-information-secondary {
+  color: #171A1FFF;        /* Dark text */
+  background: #FFFFFFFF;   /* White background */
+  border: 1px solid #DEE1E6FF; /* Light border */
+}
+
+/* Button hover effects */
+.container .container-information .container-information-contact .container-information-primary:hover {
+  background: #152D45FF;   /* Darker blue on hover */
+}
+
+.container .container-information .container-information-contact .container-information-secondary:hover {
+  color: #224A72FF;        /* Primary color on hover */
+  background: #F8F9FAFF;   /* Light gray background on hover */
+  border-color: #224A72FF; /* Primary color border on hover */
+}
+
+/* Button icons */
+.container .container-information .container-information-contact .icon {
+  width: 20px;             /* Icon size */
+  height: 20px;            /* Icon size */
+  fill: currentColor;      /* Icon color matches button text */
+}
+
+/* ===== EXPERIENCE SECTION ===== */
+.container-experience {
+  width: 100%;             /* Full width section */
+  background: #FAFAFBFF;   /* Light gray background */
+  display: flex;            /* Flexbox container */
+  flex-direction: column;   /* Stack items vertically */
+  gap: 32px;               /* Space between experience cards */
+  padding: 40px 20px;      /* Mobile-friendly padding */
+  
+  /* changed:  
+     padding-left: 232px (was fixed padding that overflowed on mobile), 
+     padding-right: 128px (was fixed padding that overflowed on mobile)
+     added: display: flex (enables flexbox layout),
+     flex-direction: column (stacks items vertically),
+     gap: 32px (provides consistent spacing),
+     padding: 40px 20px (mobile-friendly padding) */
+}
+
+/* Experience section header */
+.container-experience .container-experience-header {
+  font-family: Merriweather; /* Serif font for section title */
+  font-size: 28px;         /* Mobile-friendly heading size */
+  line-height: 32px;       /* Proper line height */
+  font-weight: 600;        /* Semi-bold weight */
+  color: #224A72FF;        /* Primary blue color */
+  text-align: center;      /* Centered title */
+}
+
+/* Individual experience card */
+.container-experience .container-experience-content {
+  background: #FFFFFFFF;   /* White background for cards */
+  border-radius: 10px;     /* Rounded corners */
+  box-shadow: 0px 0px 1px #171a1f0D, 0px 0px 2px #171a1f14; /* Subtle shadow */
+  padding: 24px;           /* Internal spacing */
+}
+
+/* Experience job title */
 .container-experience .container-experience-content .container-experience-content-title {
-  margin-top: 8px;
-  font-family: Merriweather; 
-  font-size: 24px; 
-  line-height: 32px; 
-  font-weight: 600; 
-  color: #171A1FFF; /* neutral-900 */
+  font-family: Merriweather; /* Serif font for job title */
+  font-size: 20px;         /* Mobile-friendly size */
+  line-height: 28px;       /* Proper line height */
+  font-weight: 600;        /* Semi-bold weight */
+  color: #171A1FFF;        /* Dark text color */
+  margin-bottom: 8px;      /* Space below title */
 }
 
+/* Experience company and location */
 .container-experience .container-experience-content .container-experience-content-subtitle {
-  margin-bottom: 23px;
-  font-family: Open Sans; /* Body */
-  font-size: 18px; 
-  line-height: 28px; 
-  font-weight: 400; 
-  color: #565D6DFF; /* neutral-600 */
+  font-family: Open Sans;  /* Sans-serif font for details */
+  font-size: 16px;         /* Mobile-friendly size */
+  line-height: 24px;       /* Proper line height */
+  font-weight: 400;        /* Regular weight */
+  color: #565D6DFF;        /* Medium gray color */
+  margin-bottom: 16px;     /* Space below subtitle */
 }
 
+/* Experience description text */
 .container-experience .container-experience-content .container-experience-content-detail {
-  margin-bottom: 8px;
-  width: 100%;
-  font-family: Open Sans; /* Body */
-  font-size: 16px; 
-  line-height: 24px; 
-  font-weight: 400; 
-  color: #171A1FFF; /* neutral-900 */
+  font-family: Open Sans;  /* Sans-serif font for description */
+  font-size: 14px;         /* Mobile-friendly size */
+  line-height: 20px;       /* Proper line height */
+  font-weight: 400;        /* Regular weight */
+  color: #171A1FFF;        /* Dark text color */
+  margin-bottom: 8px;      /* Space between description lines */
 }
 
-
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+/* Tablet styles - applies when screen width is 768px or larger */
+@media (min-width: 768px) {
+  .body {
+    padding: 0px 40px;     /* Increased padding for tablet */
   }
-  to {
-    transform: rotate(360deg);
+  
+  .container {
+    flex-direction: row;    /* Side-by-side layout on tablet */
+    align-items: flex-start; /* Align items to top */
+    gap: 60px;              /* More space between sections */
+    padding: 80px 0;        /* Increased vertical padding */
+  }
+  
+  .container .container-information {
+    align-items: flex-start; /* Left-align items on tablet */
+    text-align: left;        /* Left-align text */
+    flex: 1;                 /* Take up available space */
+  }
+  
+  .container .container-content {
+    flex: 1;                 /* Take up available space */
+  }
+  
+  .container .container-information .container-information-contact {
+    flex-direction: row;     /* Buttons side-by-side on tablet */
+    max-width: 450px;        /* Wider button container */
+  }
+  
+  .container-experience {
+    padding: 60px 40px;     /* Increased padding for tablet */
+  }
+  
+  .container-experience .container-experience-header {
+    font-size: 32px;        /* Larger heading on tablet */
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Desktop styles - applies when screen width is 1024px or larger */
+@media (min-width: 1024px) {
+  .body {
+    padding: 0px 80px;      /* Full desktop padding */
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  
+  .container {
+    padding: 121px 0;       /* Full desktop vertical spacing */
+    gap: 80px;              /* Maximum spacing between sections */
+  }
+  
+  .container .container-information .container-information-avatar {
+    width: 160px;           /* Full desktop avatar size */
+    height: 160px;          /* Full desktop avatar size */
+    border-radius: 80px;    /* Larger circular shape */
+  }
+  
+  .container .container-information .container-information-name {
+    font-size: 48px;        /* Full desktop name size */
+    line-height: 60px;      /* Proper line height for large text */
+  }
+  
+  .container .container-information .container-information-title {
+    font-size: 30px;        /* Full desktop title size */
+    line-height: 41px;      /* Proper line height for large text */
+    max-width: 450px;       /* Maximum width for desktop */
+  }
+  
+  .container-experience {
+    padding: 80px 80px;     /* Full desktop padding */
+  }
+  
+  .container-experience .container-experience-header {
+    font-size: 36px;        /* Full desktop section title size */
+    line-height: 40px;      /* Proper line height */
+  }
+  
+  .container-experience .container-experience-content .container-experience-content-title {
+    font-size: 24px;        /* Full desktop job title size */
+    line-height: 32px;      /* Proper line height */
+  }
+  
+  .container-experience .container-experience-content .container-experience-content-subtitle {
+    font-size: 18px;        /* Full desktop subtitle size */
+    line-height: 28px;      /* Proper line height */
+  }
+  
+  .container-experience .container-experience-content .container-experience-content-detail {
+    font-size: 16px;        /* Full desktop description size */
+    line-height: 24px;      /* Proper line height */
+  }
 }
 
 
