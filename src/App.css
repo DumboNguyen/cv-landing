@@ -345,6 +345,431 @@
   margin-bottom: 8px;      /* Space between description lines */
 }
 
+.container-skill {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px 20px;
+}
+
+.container-skill .container-skill-header {
+  font-family: Merriweather; /* Serif font for section title */
+  font-size: 28px;         /* Mobile-friendly heading size */
+  line-height: 32px;       /* Proper line height */
+  font-weight: 600;        /* Semi-bold weight */
+  color: #224A72FF;        /* Primary blue color */
+  text-align: center;      /* Centered title */
+}
+
+.container-skill .container-skill-content {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  width: 100%;
+}
+
+.container-skill .container-skill-content .container-skill-section {
+  font-family: Merriweather; /* Serif font for job title */
+  font-size: 20px;         /* Mobile-friendly size */
+  line-height: 28px;       /* Proper line height */
+  font-weight: 600;        /* Semi-bold weight */
+  color: #171A1FFF;        /* Dark text color */
+  margin-bottom: 8px;
+  flex: 1;
+}
+
+.container-skill .container-skill-section .container-skill-item-header {
+  font-family: Open Sans; /* Body */
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #171A1FFF;
+}
+
+.container-skill .container-skill-section .container-skill-item-percent {
+  font-family: Open Sans; /* Body */
+  font-size: 18px; 
+  line-height: 28px; 
+  font-weight: 500; 
+  color: #171A1FFF;
+}
+
+.container-skill .container-skill-section .container-soft-skill {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  gap: 10px;
+}
+
+.container-skill .container-skill-section .container-soft-skill-item {
+  width: fit-content;
+  border-radius: 9999px;
+  font-family: Open Sans; 
+  font-size: 18px; 
+  line-height: 28px; 
+  font-weight: 600;
+  background: #F3F4F6FF; /* neutral-200 */
+  border-color: #00000000; /* transparent */
+  padding: 4px 12px;
+}
+
+.container-education {
+  width: 100%;
+  background: #FAFAFBFF;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Experience section header */
+.container-education .container-education-header {
+  font-family: Merriweather; /* Serif font for section title */
+  font-size: 28px;         /* Mobile-friendly heading size */
+  line-height: 32px;       /* Proper line height */
+  font-weight: 600;        /* Semi-bold weight */
+  color: #224A72FF;        /* Primary blue color */
+  text-align: center;      /* Centered title */
+}
+
+.container-education .container-education-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Individual experience card */
+.container-education .container-education-card {
+  background: #FFFFFFFF;   /* White background for cards */
+  border-radius: 10px;     /* Rounded corners */
+  box-shadow: 0px 0px 1px #171a1f0D, 0px 0px 2px #171a1f14; /* Subtle shadow */
+  padding: 24px;           /* Internal spacing */
+}
+
+/* Experience job title */
+.container-education .container-education-card .container-education-card-title {
+  font-family: Merriweather; /* Serif font for job title */
+  font-size: 20px;         /* Mobile-friendly size */
+  line-height: 28px;       /* Proper line height */
+  font-weight: 600;        /* Semi-bold weight */
+  color: #171A1FFF;        /* Dark text color */
+  margin-bottom: 8px;      /* Space below title */
+}
+
+/* Experience company and location */
+.container-education .container-education-card .container-education-card-subtitle {
+  font-family: Open Sans;  /* Sans-serif font for details */
+  font-size: 16px;         /* Mobile-friendly size */
+  line-height: 24px;       /* Proper line height */
+  font-weight: 400;        /* Regular weight */
+  color: #565D6DFF;        /* Medium gray color */
+  margin-bottom: 16px;     /* Space below subtitle */
+}
+
+/* Experience description text */
+.container-education .container-education-card .container-education-card-detail {
+  font-family: Open Sans;  /* Sans-serif font for description */
+  font-size: 14px;         /* Mobile-friendly size */
+  line-height: 20px;       /* Proper line height */
+  font-weight: 400;        /* Regular weight */
+  color: #171A1FFF;        /* Dark text color */
+  margin-bottom: 8px;      /* Space between description lines */
+}
+
+.container-featured-project {
+  width: 100%;
+  background: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Experience section header */
+.container-featured-project .container-featured-project-header {
+  font-family: Merriweather; /* Serif font for section title */
+  font-size: 28px;         /* Mobile-friendly heading size */
+  line-height: 32px;       /* Proper line height */
+  font-weight: 600;        /* Semi-bold weight */
+  color: #224A72FF;        /* Primary blue color */
+  text-align: center;      /* Centered title */
+}
+
+.container-featured-project .container-featured-project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Individual experience card */
+.container-featured-project .container-featured-project-content .container-featured-project-card {
+  background: #FFFFFFFF;   /* White background for cards */
+  border-radius: 10px;     /* Rounded corners */
+  box-shadow: 0px 0px 1px #171a1f0D, 0px 0px 2px #171a1f14; /* Subtle shadow */
+  padding: 24px;           /* Internal spacing */
+}
+
+/* Experience job title */
+.container-featured-project .container-featured-project-content .container-featured-project-card .container-featured-project-card-title {
+  font-family: Merriweather; /* Serif font for job title */
+  font-size: 20px;         /* Mobile-friendly size */
+  line-height: 28px;       /* Proper line height */
+  font-weight: 600;        /* Semi-bold weight */
+  color: #171A1FFF;        /* Dark text color */
+  margin-bottom: 8px;      /* Space below title */
+}
+
+.container-featured-project .container-featured-project-content .container-featured-project-card .container-featured-project-content-img {
+  width: 100%;
+  height: 250px;
+}
+
+/* Experience description text */
+.container-featured-project .container-featured-project-content .container-featured-project-card .container-featured-project-card-description {
+  font-family: Open Sans;  /* Sans-serif font for description */
+  font-size: 14px;         /* Mobile-friendly size */
+  line-height: 20px;       /* Proper line height */
+  font-weight: 400;        /* Regular weight */
+  color: #171A1FFF;        /* Dark text color */
+  margin-bottom: 8px;      /* Space between description lines */
+}
+
+
+.container-featured-project .container-featured-project-content .container-featured-project-card .container-featured-project-card-technology {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.container-featured-project .container-featured-project-content .container-featured-project-card .container-featured-project-card-technology .container-featured-project-card-technology-item {
+  color: #565D6DFF; /* neutral-600 */
+  background: #DEE1E6FF; /* neutral-300 */
+  border-color: #565D6DFF;
+  align-items: center; 
+  justify-content: space-between; 
+  font-family: Open Sans; /* Body */
+  font-size: 12px; 
+  line-height: 20px; 
+  font-weight: 400;
+  border-radius: 9999px;
+  width: fit-content;
+  padding: 4px 12px;
+}
+
+
+.container-testimonial {
+  width: 100%;
+  background: #FAFAFBFF;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Experience section header */
+.container-testimonial .container-testimonial-header {
+  font-family: Merriweather; /* Serif font for section title */
+  font-size: 28px;         /* Mobile-friendly heading size */
+  line-height: 32px;       /* Proper line height */
+  font-weight: 600;        /* Semi-bold weight */
+  color: #224A72FF;        /* Primary blue color */
+  text-align: center;      /* Centered title */
+}
+
+.container-testimonial .container-testimonial-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Individual experience card */
+.container-testimonial .container-testimonial-content .container-testimonial-card {
+  background: #FFFFFFFF;   /* White background for cards */
+  border-radius: 10px;     /* Rounded corners */
+  box-shadow: 0px 0px 1px #171a1f0D, 0px 0px 2px #171a1f14; /* Subtle shadow */
+  padding: 24px;           /* Internal spacing */
+}
+
+/* Experience job title */
+.container-testimonial .container-testimonial-content .container-testimonial-card .container-testimonial-card-description {
+  font-family: Merriweather; /* Serif font for job title */
+  font-size: 20px;         /* Mobile-friendly size */
+  line-height: 28px;       /* Proper line height */
+  font-weight: 600;        /* Semi-bold weight */
+  color: #171A1FFF;        /* Dark text color */
+  margin-bottom: 8px;      /* Space below title */
+}
+
+/* Experience company and location */
+.container-education .container-education-content .container-education-content-subtitle {
+  font-family: Open Sans;  /* Sans-serif font for details */
+  font-size: 16px;         /* Mobile-friendly size */
+  line-height: 24px;       /* Proper line height */
+  font-weight: 400;        /* Regular weight */
+  color: #565D6DFF;        /* Medium gray color */
+  margin-bottom: 16px;     /* Space below subtitle */
+}
+
+/* Experience description text */
+.container-education .container-education-content .container-education-content-detail {
+  font-family: Open Sans;  /* Sans-serif font for description */
+  font-size: 14px;         /* Mobile-friendly size */
+  line-height: 20px;       /* Proper line height */
+  font-weight: 400;        /* Regular weight */
+  color: #171A1FFF;        /* Dark text color */
+  margin-bottom: 8px;      /* Space between description lines */
+}
+
+.container-contact {
+  width: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px 20px;
+}
+
+/* Experience section header */
+.container-contact .container-contact-header {
+  font-family: Merriweather; /* Serif font for section title */
+  font-size: 28px;         /* Mobile-friendly heading size */
+  line-height: 32px;       /* Proper line height */
+  font-weight: 600;        /* Semi-bold weight */
+  color: #224A72FF;        /* Primary blue color */
+  text-align: center;      /* Centered title */
+}
+
+/* Individual experience card */
+.container-contact .container-contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 0 20px;
+}
+
+.container-contact .container-contact-content .container-contact-content-information {
+  flex: 1;
+  min-height: 542px; 
+  background: #FFFFFFFF; /* white */
+  border-radius: 10px; 
+  box-shadow: 0px 0px 1px #171a1fdd, 0px 0px 2px #171a1f14; /* shadow-xs */
+  padding: 32px;
+}
+
+/* Experience job title */
+.container-contact .container-contact-content .container-contact-content-information .container-contact-content-information-title {
+  font-family: Merriweather; /* Serif font for job title */
+  font-size: 20px;         /* Mobile-friendly size */
+  line-height: 28px;       /* Proper line height */
+  font-weight: 600;        /* Semi-bold weight */
+  color: #171A1FFF;        /* Dark text color */
+  margin-bottom: 8px;      /* Space below title */
+}
+
+.container-contact .container-contact-content .container-contact-content-information .container-contact-content-information-description {
+  font-family: Open Sans;  /* Sans-serif font for description */
+  font-size: 14px;         /* Mobile-friendly size */
+  line-height: 20px;       /* Proper line height */
+  font-weight: 400;        /* Regular weight */
+  color: #171A1FFF;        /* Dark text color */
+  margin-bottom: 8px;      /* Space between description lines */
+}
+
+.container-contact .container-contact-content .container-contact-content-information .container-contact-primary {
+  width: 100%;             /* Full width buttons on mobile */
+  height: 40px;            /* Touch-friendly button height */
+  padding: 0 12px;         /* Horizontal padding for text */
+  display: flex;            /* Flexbox for button content */
+  align-items: center;      /* Center content vertically */
+  justify-content: center;  /* Center content horizontally */
+  gap: 5px;                /* Space between icon and text */
+  font-family: Open Sans;  /* Consistent font */
+  font-size: 14px;         /* Readable font size */
+  line-height: 22px;       /* Proper line height */
+  font-weight: 500;        /* Medium weight */
+  border-radius: 6px;      /* Rounded corners */
+  border: none;            /* No border by default */
+  color: #FFFFFFFF;        /* White text */
+  background: #224A72FF;   /* Primary blue background */
+}
+
+/* Button hover effects */
+.container-contact .container-contact-content .container-contact-content-information .container-contact-primary:hover {
+  background: #152D45FF;   /* Darker blue on hover */
+}
+
+.container-contact .container-contact-content .container-contact-content-message {
+  flex: 1;
+  min-height: 542px; 
+  background: #FFFFFFFF; /* white */
+  border-radius: 10px; 
+  box-shadow: 0px 0px 1px #171a1fdd, 0px 0px 2px #171a1f14; 
+  padding: 32px;
+}
+
+/* Experience job title */
+.container-contact .container-contact-content .container-contact-content-message .container-contact-content-message-title {
+  font-family: Merriweather; /* Serif font for job title */
+  font-size: 20px;         /* Mobile-friendly size */
+  line-height: 28px;       /* Proper line height */
+  font-weight: 600;        /* Semi-bold weight */
+  color: #171A1FFF;        /* Dark text color */
+  margin-bottom: 8px;      /* Space below title */
+}
+
+.container-contact .container-contact-content .container-contact-content-message .container-contact-content-message-subtitle {
+  font-family: Open Sans;  /* Sans-serif font for details */
+  font-size: 16px;         /* Mobile-friendly size */
+  line-height: 24px;       /* Proper line height */
+  font-weight: 400;        /* Regular weight */
+  color: #565D6DFF;        /* Medium gray color */
+  margin-bottom: 16px;     /* Space below subtitle */
+}
+
+.container-contact .container-contact-content .container-contact-content-message .container-contact-content-message-description {
+  width: 100%;
+}
+
+.container-contact .container-contact-content .container-contact-content-message .container-contact-content-message-description input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.container-contact .container-contact-content .container-contact-content-message .container-contact-content-message-description textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 150px;
+  padding: 5px;
+}
+
+
+.container-contact .container-contact-content .container-contact-content-message .container-contact-primary {
+  width: 100%;             /* Full width buttons on mobile */
+  height: 40px;            /* Touch-friendly button height */
+  padding: 0 12px;         /* Horizontal padding for text */
+  display: flex;            /* Flexbox for button content */
+  align-items: center;      /* Center content vertically */
+  justify-content: center;  /* Center content horizontally */
+  gap: 5px;                /* Space between icon and text */
+  font-family: Open Sans;  /* Consistent font */
+  font-size: 14px;         /* Readable font size */
+  line-height: 22px;       /* Proper line height */
+  font-weight: 500;        /* Medium weight */
+  border-radius: 6px;      /* Rounded corners */
+  border: none;            /* No border by default */
+  color: #FFFFFFFF;        /* White text */
+  background: #224A72FF;   /* Primary blue background */
+}
+
+/* Button hover effects */
+.container-contact .container-contact-content .container-contact-content-information .container-contact-primary:hover {
+  background: #152D45FF;   /* Darker blue on hover */
+}
+
+
 /* ===== RESPONSIVE BREAKPOINTS ===== */
 /* Tablet styles - applies when screen width is 768px or larger */
 @media (min-width: 768px) {
@@ -380,6 +805,22 @@
   
   .container-experience .container-experience-header {
     font-size: 32px;        /* Larger heading on tablet */
+  }
+  
+  .container-skill .container-skill-content{
+    flex-direction: column;
+  }
+  
+  .container-education {
+    padding: 60px 40px;     /* Increased padding for tablet */
+  }
+  
+  .container-education .container-education-header {
+    font-size: 32px;        /* Larger heading on tablet */
+  }
+  
+  .container-contact .container-contact-content{
+    min-height: 342px;
   }
 }
 
@@ -433,6 +874,51 @@
   .container-experience .container-experience-content .container-experience-content-detail {
     font-size: 16px;        /* Full desktop description size */
     line-height: 24px;      /* Proper line height */
+  }
+
+  .container-skill .container-skill-content{
+    flex-direction: row;
+  }
+  
+  .container-education {
+    padding: 80px 80px;     /* Full desktop padding */
+  }
+
+  .container-education .container-education-content {
+    flex-direction: row;
+  }
+  
+  .container-education .container-education-header {
+    font-size: 36px;        /* Full desktop section title size */
+    line-height: 40px;      /* Proper line height */
+  }
+  
+  .container-education .container-education-content .container-education-content-title {
+    font-size: 24px;        /* Full desktop job title size */
+    line-height: 32px;      /* Proper line height */
+  }
+  
+  .container-education .container-education-content .container-education-content-subtitle {
+    font-size: 18px;        /* Full desktop subtitle size */
+    line-height: 28px;      /* Proper line height */
+  }
+  
+  .container-education .container-education-content .container-education-content-detail {
+    font-size: 16px;        /* Full desktop description size */
+    line-height: 24px;      /* Proper line height */
+  }
+
+  .container-featured-project .container-featured-project-content {
+    flex-direction: row;
+  }
+
+  .container-testimonial .container-testimonial-content{
+    flex-direction: row;
+  }
+
+  .container-contact .container-contact-content{
+    flex-direction: row;
+    min-height: 542px;
   }
 }
 
