@@ -18,6 +18,9 @@ function App() {
     <>
     <div>
       <div className='header'>
+        <div className='header-logo'>
+          <img src='/images/NQH-logo1.png'></img>
+        </div>
         <div className='header-menu'>
           <div className='header-menu-item'>
             <a href="#">Experience</a>
@@ -249,7 +252,7 @@ function App() {
           <div className='container-featured-project-content'>
             <div className='container-featured-project-card'>
               <div className='container-featured-project-card-title'>
-                <img className='container-featured-project-content-image' src='/images/chat-bot.png'></img>
+                <img className='container-featured-project-content-img' src='/images/chat-bot.png'></img>
                 <div className='container-featured-project-content-title'>
                   <span>E-commerce Platform Redesign</span>
                 </div>
@@ -287,7 +290,7 @@ function App() {
             </div>
             <div className='container-featured-project-card'>
               <div className='container-featured-project-card-title'>
-                <img className='container-featured-project-content-image' src='/images/real-estate.png'></img>
+                <img className='container-featured-project-content-img' src='/images/real-estate.png'></img>
                 <div className='container-featured-project-content-title'>
                   <span>E-commerce Platform Redesign</span>
                 </div>
@@ -306,7 +309,7 @@ function App() {
             </div>
             <div className='container-featured-project-card'>
               <div className='container-featured-project-card-title'>
-                <img className='container-featured-project-content-image' src='/images/field-service-management.png'></img>
+                <img className='container-featured-project-content-img' src='/images/field-service-management.png'></img>
                 <div className='container-featured-project-content-title'>
                   <span>E-commerce Platform Redesign</span>
                 </div>
@@ -332,7 +335,11 @@ function App() {
           <div className='container-testimonial-content'>
             <div className='container-testimonial-card'>
               <div className='container-testimonial-card-avatar'>
-                <image>a</image>
+                <img 
+                  src="https://via.placeholder.com/120x120/3275B4/FFFFFF?text=A" 
+                  alt="Alex Avatar" 
+                  //className="avatar-image"
+                />
               </div>
               <div className='container-testimonial-card-description'>
                 <span>"Alex is an exceptionally talented engineer with a keen eye for detail and a strong commitment to delivering high-quality code. His contributions were invaluable to our team."</span>

@@ -65,8 +65,7 @@
   box-shadow: 0px 0px 1px #171a1f0D, 0px 0px 2px #171a1f14;
   padding: 16px 20px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
   min-height: 63px;        /* Minimum height, can grow if needed */
   
   /* changed: removed position: relative (was basic positioning that didn't help), 
@@ -76,6 +75,12 @@
 }
 
 /* Header navigation menu */
+.header .header-logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
+
 .header .header-menu {
   display: flex;
   align-items: center;
@@ -86,6 +91,7 @@
   gap: 8px;
   flex-wrap: wrap;          /* Allows menu items to wrap to new lines on small screens */
   justify-content: center; 
+  flex: 1;
 }
 
 /* Individual menu items */
@@ -206,7 +212,7 @@
 .container .container-information .container-information-name {
   font-family: Merriweather; /* Serif font for name */
   font-size: 36px;         /* Mobile-friendly name size */
-  line-height: 44px;       /* Proper line height */
+  line-height: 44px; 
   font-weight: 700;        /* Bold weight for emphasis */
   color: #224A72FF;        /* Primary blue color */
 }
@@ -215,7 +221,7 @@
 .container .container-information .container-information-title {
   font-family: Merriweather; /* Serif font for title */
   font-size: 24px;         /* Mobile-friendly title size */
-  line-height: 32px;       /* Proper line height */
+  line-height: 32px; 
   font-weight: 600;        /* Semi-bold weight */
   color: #171A1FFF;        /* Dark text color */
   max-width: 400px;        /* Prevents text from being too wide */
@@ -242,7 +248,7 @@
   gap: 5px;                /* Space between icon and text */
   font-family: Open Sans;  /* Consistent font */
   font-size: 14px;         /* Readable font size */
-  line-height: 22px;       /* Proper line height */
+  line-height: 22px; 
   font-weight: 500;        /* Medium weight */
   border-radius: 6px;      /* Rounded corners */
   border: none;            /* No border by default */
@@ -301,7 +307,7 @@
 .container-experience .container-experience-header {
   font-family: Merriweather; /* Serif font for section title */
   font-size: 28px;         /* Mobile-friendly heading size */
-  line-height: 32px;       /* Proper line height */
+  line-height: 32px; 
   font-weight: 600;        /* Semi-bold weight */
   color: #224A72FF;        /* Primary blue color */
   text-align: center;      /* Centered title */
@@ -319,7 +325,7 @@
 .container-experience .container-experience-content .container-experience-content-title {
   font-family: Merriweather; /* Serif font for job title */
   font-size: 20px;         /* Mobile-friendly size */
-  line-height: 28px;       /* Proper line height */
+  line-height: 28px; 
   font-weight: 600;        /* Semi-bold weight */
   color: #171A1FFF;        /* Dark text color */
   margin-bottom: 8px;      /* Space below title */
@@ -329,7 +335,7 @@
 .container-experience .container-experience-content .container-experience-content-subtitle {
   font-family: Open Sans;  /* Sans-serif font for details */
   font-size: 16px;         /* Mobile-friendly size */
-  line-height: 24px;       /* Proper line height */
+  line-height: 24px; 
   font-weight: 400;        /* Regular weight */
   color: #565D6DFF;        /* Medium gray color */
   margin-bottom: 16px;     /* Space below subtitle */
@@ -339,7 +345,7 @@
 .container-experience .container-experience-content .container-experience-content-detail {
   font-family: Open Sans;  /* Sans-serif font for description */
   font-size: 14px;         /* Mobile-friendly size */
-  line-height: 20px;       /* Proper line height */
+  line-height: 20px; 
   font-weight: 400;        /* Regular weight */
   color: #171A1FFF;        /* Dark text color */
   margin-bottom: 8px;      /* Space between description lines */
@@ -357,7 +363,7 @@
 .container-skill .container-skill-header {
   font-family: Merriweather; /* Serif font for section title */
   font-size: 28px;         /* Mobile-friendly heading size */
-  line-height: 32px;       /* Proper line height */
+  line-height: 32px; 
   font-weight: 600;        /* Semi-bold weight */
   color: #224A72FF;        /* Primary blue color */
   text-align: center;      /* Centered title */
@@ -373,7 +379,7 @@
 .container-skill .container-skill-content .container-skill-section {
   font-family: Merriweather; /* Serif font for job title */
   font-size: 20px;         /* Mobile-friendly size */
-  line-height: 28px;       /* Proper line height */
+  line-height: 28px; 
   font-weight: 600;        /* Semi-bold weight */
   color: #171A1FFF;        /* Dark text color */
   margin-bottom: 8px;
@@ -428,7 +434,7 @@
 .container-education .container-education-header {
   font-family: Merriweather; /* Serif font for section title */
   font-size: 28px;         /* Mobile-friendly heading size */
-  line-height: 32px;       /* Proper line height */
+  line-height: 32px; 
   font-weight: 600;        /* Semi-bold weight */
   color: #224A72FF;        /* Primary blue color */
   text-align: center;      /* Centered title */
@@ -452,7 +458,7 @@
 .container-education .container-education-card .container-education-card-title {
   font-family: Merriweather; /* Serif font for job title */
   font-size: 20px;         /* Mobile-friendly size */
-  line-height: 28px;       /* Proper line height */
+  line-height: 28px; 
   font-weight: 600;        /* Semi-bold weight */
   color: #171A1FFF;        /* Dark text color */
   margin-bottom: 8px;      /* Space below title */
@@ -462,7 +468,7 @@
 .container-education .container-education-card .container-education-card-subtitle {
   font-family: Open Sans;  /* Sans-serif font for details */
   font-size: 16px;         /* Mobile-friendly size */
-  line-height: 24px;       /* Proper line height */
+  line-height: 24px; 
   font-weight: 400;        /* Regular weight */
   color: #565D6DFF;        /* Medium gray color */
   margin-bottom: 16px;     /* Space below subtitle */
@@ -472,7 +478,7 @@
 .container-education .container-education-card .container-education-card-detail {
   font-family: Open Sans;  /* Sans-serif font for description */
   font-size: 14px;         /* Mobile-friendly size */
-  line-height: 20px;       /* Proper line height */
+  line-height: 20px; 
   font-weight: 400;        /* Regular weight */
   color: #171A1FFF;        /* Dark text color */
   margin-bottom: 8px;      /* Space between description lines */
@@ -491,7 +497,7 @@
 .container-featured-project .container-featured-project-header {
   font-family: Merriweather; /* Serif font for section title */
   font-size: 28px;         /* Mobile-friendly heading size */
-  line-height: 32px;       /* Proper line height */
+  line-height: 32px; 
   font-weight: 600;        /* Semi-bold weight */
   color: #224A72FF;        /* Primary blue color */
   text-align: center;      /* Centered title */
@@ -509,13 +515,14 @@
   border-radius: 10px;     /* Rounded corners */
   box-shadow: 0px 0px 1px #171a1f0D, 0px 0px 2px #171a1f14; /* Subtle shadow */
   padding: 24px;           /* Internal spacing */
+  flex: 1;
 }
 
 /* Experience job title */
 .container-featured-project .container-featured-project-content .container-featured-project-card .container-featured-project-card-title {
   font-family: Merriweather; /* Serif font for job title */
   font-size: 20px;         /* Mobile-friendly size */
-  line-height: 28px;       /* Proper line height */
+  line-height: 28px; 
   font-weight: 600;        /* Semi-bold weight */
   color: #171A1FFF;        /* Dark text color */
   margin-bottom: 8px;      /* Space below title */
@@ -523,19 +530,18 @@
 
 .container-featured-project .container-featured-project-content .container-featured-project-card .container-featured-project-content-img {
   width: 100%;
-  height: 250px;
+  height: 200px;
 }
 
 /* Experience description text */
 .container-featured-project .container-featured-project-content .container-featured-project-card .container-featured-project-card-description {
   font-family: Open Sans;  /* Sans-serif font for description */
   font-size: 14px;         /* Mobile-friendly size */
-  line-height: 20px;       /* Proper line height */
+  line-height: 20px; 
   font-weight: 400;        /* Regular weight */
   color: #171A1FFF;        /* Dark text color */
   margin-bottom: 8px;      /* Space between description lines */
 }
-
 
 .container-featured-project .container-featured-project-content .container-featured-project-card .container-featured-project-card-technology {
   display: flex;
@@ -572,7 +578,7 @@
 .container-testimonial .container-testimonial-header {
   font-family: Merriweather; /* Serif font for section title */
   font-size: 28px;         /* Mobile-friendly heading size */
-  line-height: 32px;       /* Proper line height */
+  line-height: 32px; 
   font-weight: 600;        /* Semi-bold weight */
   color: #224A72FF;        /* Primary blue color */
   text-align: center;      /* Centered title */
@@ -590,23 +596,52 @@
   border-radius: 10px;     /* Rounded corners */
   box-shadow: 0px 0px 1px #171a1f0D, 0px 0px 2px #171a1f14; /* Subtle shadow */
   padding: 24px;           /* Internal spacing */
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-testimonial .container-testimonial-content .container-testimonial-card .container-testimonial-card-avatar {
+  width: 120px;            /* Mobile-friendly avatar size */
+  height: 120px;           /* Square aspect ratio */
+  background: #F3FDCEFF;   /* Light green background */
+  border-radius: 60px;     /* Circular shape */
+  overflow: hidden;        /* Hides any content outside the circle */
 }
 
 /* Experience job title */
 .container-testimonial .container-testimonial-content .container-testimonial-card .container-testimonial-card-description {
-  font-family: Merriweather; /* Serif font for job title */
-  font-size: 20px;         /* Mobile-friendly size */
-  line-height: 28px;       /* Proper line height */
-  font-weight: 600;        /* Semi-bold weight */
-  color: #171A1FFF;        /* Dark text color */
-  margin-bottom: 8px;      /* Space below title */
+  margin-top: 40px;
+  font-family: Open Sans; /* Body */
+  font-size: 18px; 
+  line-height: 28px; 
+  font-weight: 400; 
+  color: #171A1FFF;
+}
+
+.container-testimonial .container-testimonial-content .container-testimonial-card .container-testimonial-card-name {
+  font-family: Open Sans; /* Body */
+  font-size: 16px; 
+  line-height: 24px; 
+  font-weight: 600; 
+  color: #171A1FFF;
+  margin-top: 15px;
+}
+
+.container-testimonial .container-testimonial-content .container-testimonial-card .container-testimonial-card-title {
+  font-family: Open Sans; /* Body */
+  font-size: 14px; 
+  line-height: 20px; 
+  font-weight: 400; 
+  color: #565D6DFF;
 }
 
 /* Experience company and location */
 .container-education .container-education-content .container-education-content-subtitle {
   font-family: Open Sans;  /* Sans-serif font for details */
   font-size: 16px;         /* Mobile-friendly size */
-  line-height: 24px;       /* Proper line height */
+  line-height: 24px;
   font-weight: 400;        /* Regular weight */
   color: #565D6DFF;        /* Medium gray color */
   margin-bottom: 16px;     /* Space below subtitle */
@@ -665,16 +700,16 @@
   line-height: 28px;       /* Proper line height */
   font-weight: 600;        /* Semi-bold weight */
   color: #171A1FFF;        /* Dark text color */
-  margin-bottom: 8px;      /* Space below title */
+  margin-bottom: 42px;      /* Space below title */
 }
 
 .container-contact .container-contact-content .container-contact-content-information .container-contact-content-information-description {
-  font-family: Open Sans;  /* Sans-serif font for description */
-  font-size: 14px;         /* Mobile-friendly size */
-  line-height: 20px;       /* Proper line height */
-  font-weight: 400;        /* Regular weight */
-  color: #171A1FFF;        /* Dark text color */
-  margin-bottom: 8px;      /* Space between description lines */
+  font-family: Open Sans; /* Body */
+  font-size: 18px; 
+  line-height: 28px; 
+  font-weight: 400; 
+  color: #171A1FFF;
+  margin-bottom: 24px;
 }
 
 .container-contact .container-contact-content .container-contact-content-information .container-contact-primary {
@@ -715,16 +750,16 @@
   font-size: 20px;         /* Mobile-friendly size */
   line-height: 28px;       /* Proper line height */
   font-weight: 600;        /* Semi-bold weight */
-  color: #171A1FFF;        /* Dark text color */
-  margin-bottom: 8px;      /* Space below title */
+  color: #171A1FFF;
+  margin-bottom: 6px;      /* Space below title */
 }
 
 .container-contact .container-contact-content .container-contact-content-message .container-contact-content-message-subtitle {
-  font-family: Open Sans;  /* Sans-serif font for details */
-  font-size: 16px;         /* Mobile-friendly size */
-  line-height: 24px;       /* Proper line height */
-  font-weight: 400;        /* Regular weight */
-  color: #565D6DFF;        /* Medium gray color */
+  font-family: Open Sans; /* Body */
+  font-size: 14px; 
+  line-height: 20px; 
+  font-weight: 400; 
+  color: #565D6DFF;
   margin-bottom: 16px;     /* Space below subtitle */
 }
 
@@ -736,15 +771,51 @@
   width: 100%;
   box-sizing: border-box;
   padding: 5px;
+  border-radius: 6px; 
+  border-width: 1px; 
+  border-color: #DEE1E6FF; /* neutral-300 */
+  border-style: solid;
+  outline: none;
+  margin-bottom: 24px;
+}
+
+.container-contact .container-contact-content .container-contact-content-message .container-contact-content-message-description input:hover {
+  color: #565D6DFF; /* neutral-600 */
+  background: #FFFFFFFF; /* white */
+  border-color: #DEE1E6FF; /* neutral-300 */
+}
+/* focused */
+.container-contact .container-contact-content .container-contact-content-message .container-contact-content-message-description input:focus {
+  color: #565D6DFF; /* neutral-600 */
+  background: #FFFFFFFF; /* white */
+  border-color: #DEE1E6FF; /* neutral-300 */
 }
 
 .container-contact .container-contact-content .container-contact-content-message .container-contact-content-message-description textarea {
+  min-height: 150px;
   width: 100%;
   box-sizing: border-box;
-  min-height: 150px;
   padding: 5px;
+  border-radius: 6px; 
+  border-width: 1px; 
+  border-color: #DEE1E6FF; /* neutral-300 */
+  border-style: solid;
+  outline: none;
+  margin-bottom: 24px;
 }
 
+.container-contact .container-contact-content .container-contact-content-message .container-contact-content-message-description textarea:hover {
+  color: #565D6DFF; /* neutral-600 */
+  background: #FFFFFFFF; /* white */
+  border-color: #DEE1E6FF; /* neutral-300 */
+}
+
+/* focused */
+.container-contact .container-contact-content .container-contact-content-message .container-contact-content-message-description textarea:focus {
+  color: #565D6DFF; /* neutral-600 */
+  background: #FFFFFFFF; /* white */
+  border-color: #DEE1E6FF; /* neutral-300 */
+}
 
 .container-contact .container-contact-content .container-contact-content-message .container-contact-primary {
   width: 100%;             /* Full width buttons on mobile */
@@ -904,8 +975,8 @@
   }
   
   .container-education .container-education-content .container-education-content-detail {
-    font-size: 16px;        /* Full desktop description size */
-    line-height: 24px;      /* Proper line height */
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .container-featured-project .container-featured-project-content {
