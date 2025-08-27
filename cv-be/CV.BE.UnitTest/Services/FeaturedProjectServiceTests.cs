@@ -1,8 +1,8 @@
-using CV.BE.Web.Models.DTOs.FeaturedProjects;
-using CV.BE.Web.Services;
-using CV.BE.Web.Domains;
-using CV.BE.Web.Repositories;
+using CV.BE.API.Models.DTOs.FeaturedProjects;
+using CV.BE.API.Services;
 using Moq;
+using CV.BE.API.Domains;
+using CV.BE.API.Repositories;
 
 namespace CV.BE.UnitTest.Services
 {

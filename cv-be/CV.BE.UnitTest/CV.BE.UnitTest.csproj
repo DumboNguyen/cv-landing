@@ -18,9 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\cv-be\CV.BE.csproj" />
-    <ProjectReference Include="..\CV.BE.Web\CV.BE.Web.csproj" />
-    <ProjectReference Include="..\CV.BE\CV.BE.Web.csproj" />
+    <ProjectReference Include="..\CV.BE.API\CV.BE.API.csproj" />
   </ItemGroup>
 
 </Project>
