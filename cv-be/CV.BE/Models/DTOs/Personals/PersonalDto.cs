@@ -1,4 +1,4 @@
-namespace CV.BE.Models.DTOs.Personals
+namespace CV.BE.Web.Models.DTOs.Personals
 {
     public class PersonalDto
     {

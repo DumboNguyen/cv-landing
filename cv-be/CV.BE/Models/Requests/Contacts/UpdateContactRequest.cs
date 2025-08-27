@@ -1,6 +1,6 @@
-﻿using CV.BE.Models.DTOs.Contacts;
+﻿using CV.BE.Web.Models.DTOs.Contacts;
 
-namespace CV.BE.Models.Requests.Contacts
+namespace CV.BE.Web.Models.Requests.Contacts
 {
     public class UpdateContactRequest
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace CV.BE.Models.Responses
+namespace CV.BE.Web.Models.DTOs
 {
     public abstract class ServiceResult
     {

@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\cv-be\CV.BE.csproj" />
-    <ProjectReference Include="..\CV.BE\CV.BE.csproj" />
+    <ProjectReference Include="..\CV.BE\CV.BE.Web.csproj" />
   </ItemGroup>
 
 </Project>

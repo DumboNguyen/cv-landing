@@ -1,7 +1,7 @@
-using CV.BE;
-using CV.BE.Infras;
-using CV.BE.Repositories;
-using CV.BE.Services;
+using CV.BE.Web;
+using CV.BE.Web.Infras;
+using CV.BE.Web.Repositories;
+using CV.BE.Web.Services;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,4 +1,4 @@
-namespace CV.BE.Models.DTOs.Educations
+namespace CV.BE.Web.Models.DTOs.Educations
 {
     public class EducationDto
     {

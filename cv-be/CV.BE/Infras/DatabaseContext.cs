@@ -1,11 +1,11 @@
-﻿using CV.BE.Domains;
+﻿using CV.BE.Web.Domains;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace CV.BE.Infras
+namespace CV.BE.Web.Infras
 {
     public interface IDatabaseContext
     {

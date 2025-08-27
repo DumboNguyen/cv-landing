@@ -1,6 +1,7 @@
-using CV.BE.Models.DTOs.Testimonials;
-using CV.BE.Repositories;
-using CV.BE.Services;
+using CV.BE.Web.Models.DTOs.Testimonials;
+using CV.BE.Web.Services;
+using CV.BE.Web.Domains;
+using CV.BE.Web.Repositories;
 using Moq;
 
 namespace CV.BE.UnitTest.Services
@@ -12,7 +13,7 @@ namespace CV.BE.UnitTest.Services
         public async Task CreateAsync_Success()
         {
             var repo = new Mock<ITestimonialRepository>();
-            repo.Setup(r => r.AddAsync(It.IsAny<CV.BE.Domains.Testimonial>())).ReturnsAsync(Guid.NewGuid());
+            repo.Setup(r => r.AddAsync(It.IsAny<Testimonial>())).ReturnsAsync(Guid.NewGuid());
             var svc = new TestimonialService(repo.Object);
             var dto = new TestimonialDto { AuthorName = "A", Descriptions = new List<string>(), AuthorPosition = "P" };
             var res = await svc.CreateAsync(dto);

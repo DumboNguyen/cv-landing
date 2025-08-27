@@ -1,10 +1,10 @@
-﻿using CV.BE.Models.DTOs.Educations;
-using CV.BE.Models.Responses;
-using CV.BE.Services;
+﻿using CV.BE.Web.Models.DTOs.Educations;
+using CV.BE.Web.Models.Responses;
+using CV.BE.Web.Services;
 using Mapster;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CV.BE.Controllers
+namespace CV.BE.Web.Controllers
 {
     [ApiController]
     [APIRoute("[controller]")]

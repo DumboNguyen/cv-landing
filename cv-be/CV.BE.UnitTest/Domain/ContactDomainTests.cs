@@ -1,4 +1,4 @@
-using CV.BE.Domains;
+using CV.BE.Web.Domains;
 
 namespace CV.BE.UnitTest.Domain
 {

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CV.BE.UnitTest", "CV.BE.UnitTest\CV.BE.UnitTest.csproj", "{B0645201-B194-4D80-9C4C-CE1C7E6E363E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CV.BE", "CV.BE\CV.BE.csproj", "{E2B2F529-D1A7-4E92-BC98-BCE8AB364582}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CV.BE.Web", "CV.BE\CV.BE.Web.csproj", "{E2B2F529-D1A7-4E92-BC98-BCE8AB364582}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,11 +1,10 @@
-﻿
-namespace CV.BE.Domains
+﻿namespace CV.BE.Web.Domains
 {
     public class Contact : BaseDomain
     {
         public Contact()
         {
-            
+
         }
 
         public static Contact Create(string email, string phone, string linkedIn, string gitHub)

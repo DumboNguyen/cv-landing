@@ -1,4 +1,4 @@
-﻿namespace CV.BE
+﻿namespace CV.BE.Web
 {
     public interface IAppConfig
     {

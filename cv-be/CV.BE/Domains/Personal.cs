@@ -1,10 +1,10 @@
-﻿namespace CV.BE.Domains
+﻿namespace CV.BE.Web.Domains
 {
     public class Personal : BaseDomain
     {
         public Personal()
         {
-            
+
         }
 
         public static Personal Create(string firstName, string lastName, string title, string aboutMe)

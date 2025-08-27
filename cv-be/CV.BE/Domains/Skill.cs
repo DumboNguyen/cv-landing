@@ -1,11 +1,10 @@
-﻿
-namespace CV.BE.Domains
+﻿namespace CV.BE.Web.Domains
 {
     public class Skill : BaseDomain
     {
         public Skill()
         {
-            
+
         }
 
         public static Skill Create(string name, int proficiencyPercent, Guid skillCategoryId)

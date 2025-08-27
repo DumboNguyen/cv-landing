@@ -1,4 +1,4 @@
-namespace CV.BE.Models.DTOs.FeaturedProjects
+namespace CV.BE.Web.Models.DTOs.FeaturedProjects
 {
     public class FeaturedProjectDto
     {

@@ -1,8 +1,8 @@
-using CV.BE.Domains;
-using CV.BE.Infras;
+using CV.BE.Web.Domains;
+using CV.BE.Web.Infras;
 using Microsoft.EntityFrameworkCore;
 
-namespace CV.BE.Repositories
+namespace CV.BE.Web.Repositories
 {
     public interface ISkillRepository
     {

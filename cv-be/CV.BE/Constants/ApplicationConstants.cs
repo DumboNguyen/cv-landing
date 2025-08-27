@@ -1,4 +1,4 @@
-﻿namespace CV.BE.Constants
+﻿namespace CV.BE.Web.Constants
 {
     public class ApplicationConstants
     {

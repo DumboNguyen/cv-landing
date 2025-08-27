@@ -1,4 +1,4 @@
-﻿namespace CV.BE.Models.Responses.Contacts
+﻿namespace CV.BE.Web.Models.Responses.Contacts
 {
     public class ContactResponse
     {

@@ -1,11 +1,10 @@
-﻿
-namespace CV.BE.Domains
+﻿namespace CV.BE.Web.Domains
 {
     public class Testimonial : BaseDomain
     {
         public Testimonial()
         {
-            
+
         }
 
         public static Testimonial Create(string authorName, List<string> descriptions, string authorPosition)

@@ -1,4 +1,4 @@
-﻿namespace CV.BE.Models.DTOs.Contacts
+﻿namespace CV.BE.Web.Models.DTOs.Contacts
 {
     public class ContactDto
     {

@@ -1,10 +1,10 @@
-﻿namespace CV.BE.Domains
+﻿namespace CV.BE.Web.Domains
 {
     public class Experience : BaseDomain
     {
         public Experience()
         {
-            
+
         }
 
         public static Experience Create(string companyName, string location, DateTime workStartTime, DateTime workEndTime, string level, List<string> descriptions)

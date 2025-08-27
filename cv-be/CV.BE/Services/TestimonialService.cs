@@ -1,10 +1,10 @@
-using CV.BE.Domains;
-using CV.BE.Models.DTOs.Testimonials;
-using CV.BE.Models.Responses;
-using CV.BE.Repositories;
+using CV.BE.Web.Domains;
+using CV.BE.Web.Models.DTOs;
+using CV.BE.Web.Models.DTOs.Testimonials;
+using CV.BE.Web.Repositories;
 using Mapster;
 
-namespace CV.BE.Services
+namespace CV.BE.Web.Services
 {
     public interface ITestimonialService
     {

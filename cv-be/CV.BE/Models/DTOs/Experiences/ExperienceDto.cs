@@ -1,4 +1,4 @@
-namespace CV.BE.Models.DTOs.Experiences
+namespace CV.BE.Web.Models.DTOs.Experiences
 {
     public class ExperienceDto
     {

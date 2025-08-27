@@ -1,8 +1,8 @@
-﻿using CV.BE.Constants;
+﻿using CV.BE.Web.Constants;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics.CodeAnalysis;
 
-namespace CV.BE.Controllers
+namespace CV.BE.Web.Controllers
 {
     public class APIRoute : RouteAttribute
     {

@@ -1,4 +1,4 @@
-﻿namespace CV.BE.Domains
+﻿namespace CV.BE.Web.Domains
 {
     public class BaseDomain
     {

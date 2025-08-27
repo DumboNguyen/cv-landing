@@ -1,4 +1,4 @@
-namespace CV.BE.Models.DTOs.Skills
+namespace CV.BE.Web.Models.DTOs.Skills
 {
     public class SkillDto
     {
