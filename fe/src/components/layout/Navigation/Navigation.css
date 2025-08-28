@@ -1,0 +1,38 @@
+.header-menu {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.header-menu-item a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.header-menu-item a:hover {
+  color: #224A72FF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-menu {
+    gap: 20px;
+  }
+  
+  .header-menu-item a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-menu {
+    gap: 16px;
+  }
+  
+  .header-menu-item a {
+    font-size: 12px;
+  }
+}

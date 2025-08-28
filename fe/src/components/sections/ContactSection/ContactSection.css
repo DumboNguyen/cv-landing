@@ -1,0 +1,122 @@
+.container-contact {
+  margin-bottom: 60px;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  padding: 0 20px;
+}
+
+.container-contact-header {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.container-contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.container-contact-content-information-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.container-contact-content-information-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.container-contact-primary {
+  margin-top: 20px;
+}
+
+.container-contact-content-message-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.container-contact-content-message-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.container-contact-content-message-description input,
+.container-contact-content-message-description textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.container-contact-content-message-description input:focus,
+.container-contact-content-message-description textarea:focus {
+  outline: none;
+  border-color: #224A72FF;
+}
+
+.container-contact-content-message-description textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container-contact {
+    padding: 0 16px;
+  }
+  
+  .container-contact-header {
+    font-size: 24px;
+  }
+  
+  .container-contact-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .container-contact-content-information-title,
+  .container-contact-content-message-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-contact {
+    padding: 0 12px;
+  }
+  
+  .container-contact-header {
+    font-size: 22px;
+  }
+  
+  .container-contact-content {
+    gap: 24px;
+  }
+  
+  .container-contact-content-information-title,
+  .container-contact-content-message-title {
+    font-size: 16px;
+  }
+  
+  .container-contact-content-information-description,
+  .container-contact-content-message-subtitle {
+    font-size: 14px;
+  }
+}

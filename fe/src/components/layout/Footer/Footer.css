@@ -1,0 +1,40 @@
+.footer {
+  background: #f8f9fa;
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content p {
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 0;
+    margin-top: 60px;
+  }
+  
+  .footer-content {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 24px 0;
+    margin-top: 40px;
+  }
+  
+  .footer-content {
+    padding: 0 12px;
+  }
+}
